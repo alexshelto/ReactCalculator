@@ -8,6 +8,13 @@
  */
 
 
+ //TODO:
+ // FIX sign change
+
+
+
+
+
 import React from "react"
 
 //Importing screen nested in calculator
@@ -37,22 +44,24 @@ class Calculator extends React.Component {
     }
     //opperations
     else if(['+','-','*','/','%'].indexOf(pressedButton)!=-1) equation += ' ' + pressedButton + ' '
+    else if(pressedButton == '+/-'){
+    }
     else if(pressedButton === '='){
       try{
         var evaluatedResult = eval(equation)
         const result = Number.isInteger(evaluatedResult)? evaluatedResult : evaluatedResult.toFixed(2)
-        this.setState({result});
+        this.setState({result})
       }
        catch (error) {
         alert('Invalid Mathematical Equation');
         }
       }
     else {
-      equation = equation.trim();
+      equation = equation.trim()
       equation = equation.substr(0, equation.length - 1);
     }
                 
-    this.setState({equation: equation});
+    this.setState({equation: equation})
     } 
 
     //Clearing the screen
