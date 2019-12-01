@@ -1,0 +1,123 @@
+/**
+ * @Author: Alex Shelton <zoso>
+ * @Date:   2019-11-27T23:10:20-05:00
+ * @Email:  as305218@ohio.edu
+ * @Filename: style.css
+ * @Last modified by:   zoso
+ * @Last modified time: 2019-12-01T12:41:36-05:00
+ */
+
+
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: inherit;
+}
+
+/* Variables */
+:root {
+    --color-white: #fff;
+    --color-light-white: #eee;
+    --color-tomato: #d40640;
+    --color-green-transparent: rgba(16, 110, 87, 0.5); /*Red Blue Green, transparency */
+    --color-blue-transparent: rgba(25, 90, 187, 0.6);
+    --color-orange: #ff3c00;
+    --color-light-black: #222;
+    --color-black: #000;
+    --shadow: rgba(0, 0, 0, .4);
+}
+
+/* Layout */
+.app {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, var(--color-green-transparent), var(--color-blue-transparent)), url("city.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calculator {
+    height: 60vh;
+    width: 30%;
+    box-shadow: 0 2rem 4rem var(--shadow);
+    background-color: white;
+  }
+
+  .screen {
+    height: 15vh;
+    width: 100%;
+    padding: 0 2rem;
+    overflow: hidden;
+    white-space: no-wrap;
+    color: var(--color-light-white);
+    background-color: green;
+  }
+
+  .result-screen {
+    height: 12vh;
+    font-size: 8rem;
+    font-weight: 600;  /* To display the value at the bottom-right of the container */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .computation-screen {
+    height: 6vh;
+    font-size: 2.5rem;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.keypad {
+    height: 55vh;
+    width: 100%;
+  }
+
+.keypad-row {
+    height: 11vh; /* (80vh calculator - 25vh screen) / 5 keypadRow components = 11vh */
+    width: 100%;
+    display: flex; /* To control the dimension */
+    color: white;
+  }
+
+
+  .button {
+    width: 25%;
+    height: 100%;
+    font-size: 3rem;
+    font-family: inherit;
+    background-color: var(--color-white);
+    border: 1px solid transparent;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+  }
+
+  .button:hover {
+    color: green;
+    background-color: var(--color-blue-transparent);
+  }
+  
+  .buttonn:active {
+    transform: scale(.95);
+  }
