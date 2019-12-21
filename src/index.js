@@ -13,6 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //--------------------------------//
 import App from './App';
+import Window from './Layout/Window/Window'
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

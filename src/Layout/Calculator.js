@@ -35,16 +35,16 @@ class Calculator extends React.Component {
     let equation = this.state.equation
     const pressedButton = event.target.innerHTML
     
-      if(pressedButton == 'C'){
+      if(pressedButton === 'C'){
         return this.clear()
     }
     //building the number
     else if((pressedButton >= '0' && pressedButton <= '9') || pressedButton === '.'){
-       equation+=pressedButton
+       equation += pressedButton
     }
     //opperations
-    else if(['+','-','*','/','%'].indexOf(pressedButton)!=-1) equation += ' ' + pressedButton + ' '
-    else if(pressedButton == '+/-'){
+    else if(['+','-','*','/','%'].indexOf(pressedButton)!==-1) equation += (' ' + pressedButton + ' ')
+    else if(pressedButton === '+/-'){
     }
     else if(pressedButton === '='){
       try{

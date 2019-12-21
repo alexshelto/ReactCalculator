@@ -77,8 +77,8 @@ body {
     align-items: flex-end;
   }
 
-  .computation-screen {
-    height: 6vh;
+  .computational-screen {
+    height: 4vh;
     font-size: 2.5rem;
     
     display: flex;
@@ -120,4 +120,9 @@ body {
   
   .buttonn:active {
     transform: scale(.95);
+  }
+
+  .window{
+    height: 100vh;
+    width:100%;
   }

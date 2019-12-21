@@ -13,19 +13,21 @@ import React from "react"
 import "./Styles/style.css"
 //---------Custom Components------------//
 
-//------------Calculator------------//
+//Window Layout -------------------------------------------------------------------
+import Window from "./Layout/Window/Window.js"
+
+//------------Calculator------------------------------------------------------------
 import Calculator from "./Layout/Calculator.js"
-//-----------Screen-----------------//
+//Screen
 import Screen from "./Layout/Screen/Screen.js"
 import ResultScreen from "./Layout/Screen/ResultScreen.js"
 import ComputationalScreen from "./Layout/Screen/ComputationalScreen.js"
-//--------------Keypad----------------//
+//Keypad
 import Keypad from "./Layout/Keypad/Keypad.js"
 import KeypadRow from "./Layout/Keypad/KeypadRow/KeypadRow.js"
-//--------------Buttons----------------//
+//Buttons
 import Button from "./Components/Buttons/Button.js"
-
-//Import Graph from "./Layout/Graph"
+//-------------------------------------------------------------------------------------
 
 
 function App(){
@@ -37,4 +39,4 @@ function App(){
 }
 
 
-export default App;
+export default App
